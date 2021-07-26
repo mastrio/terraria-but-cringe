@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Camera.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Main.gd" type="Script" id=3]
+[ext_resource path="res://Tiles.gd" type="Script" id=4]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Camera" parent="." instance=ExtResource( 2 )]
+position = Vector2( 552.415, 308.145 )
+
+[node name="Coords" type="Label" parent="Camera"]
+margin_left = 296.051
+margin_top = -293.726
+margin_right = 461.051
+margin_bottom = -274.726
+rect_scale = Vector2( 1.5, 1.5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0, 0 ,0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tiles" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 128.195, 44.4974 )
